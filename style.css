@@ -12,12 +12,15 @@ body {
 /* Hero Section */
 .hero-section {
   background-image: linear-gradient(to right, #613671, #41587d);
-  height: 83vh;
-  position: relative;
+  /* height: 83vh; */
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
 }
 
 .primary-nav {
   display: flex;
+  gap: 2rem;
   justify-content: space-around;
   flex-wrap: wrap;
   padding-top: 2.5rem;
@@ -32,6 +35,11 @@ body {
   list-style: none;
   display: flex;
   gap: 1rem;
+
+  @media (max-width: 400px) {
+    flex-wrap: wrap;
+    padding: 0 2rem;
+  }
 }
 
 .primary-nav a {
@@ -45,10 +53,11 @@ body {
 }
 
 .hero-contents {
-  position: absolute;
+  /* position: absolute;
   bottom: 0;
   left: 28%;
-  margin-bottom: -4px;
+  margin-bottom: -4px; */
+  text-align: center;
 }
 
 .hero-contents h2 {
@@ -91,13 +100,18 @@ body {
 
 .hero-contents img {
   max-width: 100%;
+  margin-bottom: -4px;
 }
 
 /* Admin Feature Section */
 .admin-feature-container {
-  padding: 5rem 13rem;
   text-align: center;
+  padding: 3rem 5rem;
   margin: auto;
+
+  @media (min-width: 1200px) {
+    padding: 5rem 13rem;
+  }
 }
 
 .admin-feature-container h2 {
@@ -114,10 +128,24 @@ body {
   font-size: 14px;
 }
 
+.admin-cards-ccontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .admin-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr 1fr; */
   gap: 4rem;
+
+  @media (max-width: 899px) and (min-width: 500px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 900px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .unit-card {
@@ -159,11 +187,16 @@ body {
 
 .flexed-images {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 .flexed-images img {
   width: 350px;
+  max-width: 100%;
   border: white 10px solid;
 }
 
@@ -171,6 +204,7 @@ body {
 .pricing-section {
   margin-top: 8rem;
   margin-bottom: 5rem;
+  padding: 2rem;
 }
 .pricing-section h2 {
   text-align: center;
@@ -238,7 +272,7 @@ body {
   transition: 0.3s;
 }
 
-/* Free Trial */
+/* Free Trial Section */
 .free-trial-section {
   background-color: #ea553d;
   color: white;
@@ -246,6 +280,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 20vh;
+  padding: 2rem;
 }
 
 .free-trial-section .btn-container {
@@ -268,6 +303,7 @@ body {
 /*Our Team section*/
 .team-section {
   margin-bottom: 5rem;
+  padding: 2rem;
 }
 
 .team-section h2 {
@@ -327,6 +363,7 @@ body {
   text-align: center;
   margin-bottom: 3rem;
   background-color: white;
+  padding: 1.5rem;
   padding-bottom: 10rem;
   padding-top: 4rem
 }
@@ -357,6 +394,7 @@ body {
 /* Form Section */
   .form-section {
     text-align: center;
+    padding: 1rem;
     padding-bottom: 5rem;
   }
 
@@ -380,6 +418,7 @@ body {
   .form-section label {
     display: block;
     text-align: start;
+    margin-top: 16px;
     margin-bottom: 10px;
     font-size: 14px;
     font-weight: 600;
@@ -390,6 +429,14 @@ body {
     border: 1px solid #eee;
     height: 2.3rem;
     border-radius: 5px;
+
+    @media (max-width: 400px) {
+      width: 18rem;
+    }
+
+    @media (max-width: 340px) {
+      width: 14rem;
+    }
   }
 
   .textarea-container {
@@ -437,7 +484,12 @@ footer {
   padding: 2rem 0;
   font-size: 14px;
   display: flex;
+  gap: 2rem;
   justify-content: space-around;
+
+  @media (max-width: 500px) {
+    flex-wrap: wrap;
+  }
 }
 
 .contact-icons {
