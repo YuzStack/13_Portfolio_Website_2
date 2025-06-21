@@ -12,8 +12,6 @@ body {
 /* Hero Section */
 .hero-section {
   background-image: linear-gradient(to right, #613671, #41587d);
-  /* height: 83vh; */
-  /* position: relative; */
   display: flex;
   flex-direction: column;
 }
@@ -24,10 +22,21 @@ body {
   justify-content: space-around;
   flex-wrap: wrap;
   padding-top: 2.5rem;
+  background-color: transparent;
+  position: sticky;
+  top: 0;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+  color: white;
+}
+
+.primary-nav.scrolled {
+  background-color: #F7F8F8;
+  color: #ea553d;
+  padding-bottom: 1.2rem;
 }
 
 .primary-nav h3 {
-  color: white;
   font-size: 1.3rem;
 }
 
@@ -48,15 +57,15 @@ body {
   transition: 0.3s ease;
 }
 
+.scrolled-link {
+  color: #ea553d;
+}
+
 .primary-nav a:hover {
   color: white;
 }
 
 .hero-contents {
-  /* position: absolute;
-  bottom: 0;
-  left: 28%;
-  margin-bottom: -4px; */
   text-align: center;
 }
 
