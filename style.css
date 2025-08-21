@@ -23,15 +23,17 @@ body {
   flex-wrap: wrap;
   padding-top: 2.5rem;
   background-color: transparent;
-  position: sticky;
+  position: fixed;
   top: 0;
-  transition: background-color 0.3s ease;
+  left: 0;
+  width: 100vw;
+  transition: 0.3s ease-in-out;
   z-index: 1000;
   color: white;
 }
 
 .primary-nav.scrolled {
-  background-color: #F7F8F8;
+  background-color: #f7f8f8;
   color: #ea553d;
   padding-bottom: 1.2rem;
 }
@@ -57,16 +59,33 @@ body {
   transition: 0.3s ease;
 }
 
-.scrolled-link {
-  color: #ea553d;
-}
-
 .primary-nav a:hover {
   color: white;
 }
 
+.scrolled-link {
+  color: #ea553d !important;
+}
+
+.close-btn {
+  display: none;
+}
+
+.bars {
+  font-size: 25px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 8px;
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+}
+
 .hero-contents {
   text-align: center;
+  margin-top: 3rem;
 }
 
 .hero-contents h2 {
@@ -112,6 +131,68 @@ body {
   margin-bottom: -4px;
 }
 
+@media (max-width: 768px) {
+  .primary-nav {
+    justify-content: space-between;
+    padding: 20px 25px;
+    align-items: center;
+  }
+
+  .bars {
+    display: block;
+    color: gray;
+  }
+
+  .primary-nav ul {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f7f8f8;
+    padding: 20px;
+    width: 200px;
+    font-size: 18px;
+    gap: 1.5rem;
+    text-align: center;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: 0.3s ease-in-out;
+    z-index: 10;
+  }
+
+  .close-btn {
+    display: block;
+    text-align: start;
+    font-size: 28px;
+  }
+
+  .close-btn i {
+    color: #555;
+  }
+
+  .primary-nav a {
+    color: #ea553d;
+  }
+
+  .overlay {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
+.nav-active {
+  transform: translateX(0) !important;
+}
+
 /* Admin Feature Section */
 .admin-feature-container {
   text-align: center;
@@ -145,7 +226,6 @@ body {
 
 .admin-cards {
   display: grid;
-  /* grid-template-columns: 1fr 1fr 1fr; */
   gap: 4rem;
 
   @media (max-width: 899px) and (min-width: 500px) {
@@ -374,7 +454,7 @@ body {
   background-color: white;
   padding: 1.5rem;
   padding-bottom: 10rem;
-  padding-top: 4rem
+  padding-top: 4rem;
 }
 
 .client-reviews h1 {
@@ -392,7 +472,7 @@ body {
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 600;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .client-reviews h4 {
@@ -401,57 +481,57 @@ body {
 }
 
 /* Form Section */
-  .form-section {
-    text-align: center;
-    padding: 1rem;
-    padding-bottom: 5rem;
+.form-section {
+  text-align: center;
+  padding: 1rem;
+  padding-bottom: 5rem;
+}
+
+.form-section h2 {
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+}
+
+.form-section p {
+  line-height: 1.5;
+  margin-bottom: 5rem;
+  color: #777;
+  font: 14px;
+}
+
+.unit-form {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.form-section label {
+  display: block;
+  text-align: start;
+  margin-top: 16px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-section input {
+  width: 21rem;
+  border: 1px solid #eee;
+  height: 2.3rem;
+  border-radius: 5px;
+
+  @media (max-width: 400px) {
+    width: 18rem;
   }
 
-  .form-section h2 {
-    margin-top: 5rem;
-    margin-bottom: 1rem;
+  @media (max-width: 340px) {
+    width: 14rem;
   }
+}
 
-  .form-section p {
-    line-height: 1.5;
-    margin-bottom: 5rem;
-    color: #777;
-    font: 14px;
-  }
-
-  .unit-form {
-    display: inline-block;
-    margin-left: 1rem;
-  }
-
-  .form-section label {
-    display: block;
-    text-align: start;
-    margin-top: 16px;
-    margin-bottom: 10px;
-    font-size: 14px;
-    font-weight: 600;
-  }
-
-  .form-section input {
-    width: 21rem;
-    border: 1px solid #eee;
-    height: 2.3rem;
-    border-radius: 5px;
-
-    @media (max-width: 400px) {
-      width: 18rem;
-    }
-
-    @media (max-width: 340px) {
-      width: 14rem;
-    }
-  }
-
-  .textarea-container {
-    display: inline-block;
-    width: 62vw;
-  }
+.textarea-container {
+  display: inline-block;
+  width: 62vw;
+}
 
 .message-text {
   margin-top: 1rem;

@@ -3,22 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Website</title>
     <link rel="stylesheet" href="./style.css" />
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+    <script defer src="script.js"></script>
+    <title>Portfolio Website</title>
   </head>
   <body>
     <!-- Hero Section -->
     <section class="hero-section">
       <nav class="primary-nav">
         <h3>Admiria</h3>
-        <ul>
+        <ul id="menu">
+          <li class="close-btn">
+            <a href="#"><i class="fa-solid fa-xmark"></i></a>
+          </li>
           <li><a href="#">Home</a></li>
           <li><a href="#Feature">Features</a></li>
           <li><a href="#Shot">Shot</a></li>
@@ -26,6 +27,8 @@
           <li><a href="#Team">Team</a></li>
           <li><a href="#Contact">Contact</a></li>
         </ul>
+        <button class="bars"><i class="fa-solid fa-bars"></i></button>
+        <div class="overlay hidden"></div>
       </nav>
 
       <div class="hero-contents">
@@ -279,20 +282,20 @@
         <div class="text-input-container">
           <div class="unit-form">
             <label for="name">Name</label>
-            <input type="text" />
+            <input type="text" name="name" id="name" />
           </div>
           <div class="unit-form">
             <label for="email">Email Address</label>
-            <input type="email" name="email" id="" />
+            <input type="email" name="email" id="email" />
           </div>
           <div class="unit-form">
             <label for="subject">Subject</label>
-            <input type="text" />
+            <input type="text" id="subject" />
           </div>
         </div>
         <div class="textarea-container">
           <label for="message" class="message-text">Message</label>
-          <textarea name="" id="" cols="90" rows="8"></textarea>
+          <textarea name="" id="message" cols="90" rows="8"></textarea>
         </div>
         <div class="btn-container2">
           <button type="submit">SEND MESSAGE</button>
@@ -311,6 +314,5 @@
         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
       </div>
     </footer>
-    <script src="index.js"></script>
   </body>
 </html>
