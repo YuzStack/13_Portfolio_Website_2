@@ -5,27 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
     <script defer src="script.js"></script>
     <title>Portfolio Website</title>
   </head>
   <body>
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section" id="home-section">
       <nav class="primary-nav">
         <h3>Admiria</h3>
         <ul id="menu">
           <li class="close-btn">
             <a href="#"><i class="fa-solid fa-xmark"></i></a>
           </li>
-          <li><a href="#">Home</a></li>
-          <li><a href="#Feature">Features</a></li>
-          <li><a href="#Shot">Shot</a></li>
-          <li><a href="#Pricing">Pricing</a></li>
-          <li><a href="#Team">Team</a></li>
-          <li><a href="#Contact">Contact</a></li>
+          <li><a class="home-sec-btn">Home</a></li>
+          <li><a class="features-sec-btn">Features</a></li>
+          <li>
+            <a class="screenshots-sec-btn">Shot</a>
+          </li>
+          <li>
+            <a class="pricing-sec-btn">Pricing</a>
+          </li>
+          <li><a class="team-sec-btn">Team</a></li>
+          <li>
+            <a class="contact-sec-btn">Contact</a>
+          </li>
         </ul>
         <button class="bars"><i class="fa-solid fa-bars"></i></button>
         <div class="overlay hidden"></div>
@@ -44,7 +50,7 @@
     </section>
 
     <!-- Admin Feature Section -->
-    <section class="admin-feature-container" id="Feature">
+    <section class="admin-feature-container" id="features-section">
       <h2>Admin Features</h2>
       <p class="main-paragraph">
         Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
@@ -142,7 +148,7 @@
     </section>
 
     <!-- Screenshots Section -->
-    <section class="screenshot-section" id="Shot">
+    <section class="screenshot-section" id="screenshots-section">
       <h2>Screenshot</h2>
       <p>
         Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
@@ -165,7 +171,7 @@
     </section>
 
     <!-- Pricing Section -->
-    <section class="pricing-section" id="Pricing">
+    <section class="pricing-section" id="pricing-section">
       <h2>Simple Pricing</h2>
       <p class="paragraph">
         Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
@@ -218,7 +224,7 @@
     </section>
 
     <!--Our Team section-->
-    <section class="team-section" id="Team">
+    <section class="team-section" id="team-section">
       <h2>Our Team</h2>
       <p class="first-p">
         Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
@@ -270,8 +276,8 @@
       <h4>CEO, Pic.com</h4>
     </section>
 
-    <!--Form Section -->
-    <section class="form-section" id="Contact">
+    <!-- Contact (form) Section -->
+    <section class="form-section" id="contact-section">
       <h2>Get In Touch</h2>
       <p>
         Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
