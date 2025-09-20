@@ -1,11 +1,17 @@
 'use strict';
 
-// Navbar Interactivity ‼️‼️
-
-// Scroll Interactivity
+// ELEMENTS
 const navContainer = document.querySelector('.primary-nav');
 const navLinks = document.querySelectorAll('.primary-nav a');
 
+const bars = document.querySelector('.bars');
+const menu = document.querySelector('#menu');
+const closeBtn = document.querySelector('.close-btn i');
+const overlay = document.querySelector('.overlay');
+
+// Navbar Interactivity ‼️‼️
+
+// Scroll Interactivity
 window.addEventListener('scroll', () => {
   if (window.scrollY > 20) {
     navContainer.classList.add('scrolled');
@@ -22,12 +28,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Menu Click Interactivity
-const bars = document.querySelector('.bars');
-const menu = document.querySelector('#menu');
-const closeBtn = document.querySelector('.close-btn i');
-const overlay = document.querySelector('.overlay');
-
+// Menu Interactivity (for mobile responsiveness)
 bars.addEventListener('click', () => {
   menu.classList.toggle('nav-active');
   overlay.classList.remove('hidden');
@@ -43,42 +44,11 @@ overlay.addEventListener('click', closeMenu);
 
 // Smooth Scrolling ‼️‼️
 
-// Buttons
-const homeSecBtn = document.querySelector('.home-sec-btn');
-const featuresSecBtn = document.querySelector('.features-sec-btn');
-const screenshotsSecBtn = document.querySelector('.screenshots-sec-btn');
-const pricingSecBtn = document.querySelector('.pricing-sec-btn');
-const teamSecBtn = document.querySelector('.team-sec-btn');
-const contactSecBtn = document.querySelector('.contact-sec-btn');
+document.querySelector('#menu').addEventListener('click', function (e) {
+  e.preventDefault();
 
-// Sections (to scroll to)
-const homeSec = document.querySelector('#home-section');
-const featuresSec = document.querySelector('#features-section');
-const screenshotsSec = document.querySelector('#screenshots-section');
-const pricingSec = document.querySelector('#pricing-section');
-const teamSec = document.querySelector('#team-section');
-const contactSec = document.querySelector('#contact-section');
-
-homeSecBtn.addEventListener('click', () =>
-  homeSec.scrollIntoView({ behavior: 'smooth' })
-);
-
-featuresSecBtn.addEventListener('click', () =>
-  featuresSec.scrollIntoView({ behavior: 'smooth' })
-);
-
-screenshotsSecBtn.addEventListener('click', () =>
-  screenshotsSec.scrollIntoView({ behavior: 'smooth' })
-);
-
-pricingSecBtn.addEventListener('click', () =>
-  pricingSec.scrollIntoView({ behavior: 'smooth' })
-);
-
-teamSecBtn.addEventListener('click', () =>
-  teamSec.scrollIntoView({ behavior: 'smooth' })
-);
-
-contactSecBtn.addEventListener('click', () =>
-  contactSec.scrollIntoView({ behavior: 'smooth' })
-);
+  if (e.target.classList.contains('nav__link')) {
+    const id = e.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  }
+});

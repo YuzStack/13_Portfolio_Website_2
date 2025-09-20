@@ -1,3 +1,8 @@
+:root {
+  --color-primary-orange: #ea553d;
+  --color-secondary-orange: #b74e3d;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -34,7 +39,7 @@ body {
 
 .primary-nav.scrolled {
   background-color: #f7f8f8;
-  color: #ea553d;
+  color: var(--color-primary-orange);
   padding-bottom: 1.2rem;
 }
 
@@ -64,7 +69,7 @@ body {
 }
 
 .scrolled-link {
-  color: #ea553d !important;
+  color: var(--color-primary-orange) !important;
 }
 
 .close-btn {
@@ -113,7 +118,7 @@ body {
   text-transform: uppercase;
   padding: 1rem;
   font-weight: 600;
-  background-color: #ea553d;
+  background-color: var(--color-primary-orange);
   color: white;
   border: none;
   border-radius: 5px;
@@ -123,7 +128,7 @@ body {
 
 .hero-contents button:hover {
   color: rgba(255, 255, 255, 0.854);
-  background-color: #b74e3d;
+  background-color: var(--color-secondary-orange);
 }
 
 .hero-contents img {
@@ -171,7 +176,7 @@ body {
   }
 
   .primary-nav a {
-    color: #ea553d;
+    color: var(--color-primary-orange);
   }
 
   .overlay {
@@ -253,7 +258,8 @@ body {
 
 /* Screenshot Section*/
 .screenshot-section {
-  margin-top: 8rem;
+  margin-top: 3rem;
+  padding-top: 5rem;
 }
 
 .screenshot-section h2 {
@@ -291,9 +297,10 @@ body {
 
 /* Pricing Section */
 .pricing-section {
-  margin-top: 8rem;
-  margin-bottom: 5rem;
+  margin-top: 3rem;
   padding: 2rem;
+  padding-top: 5rem;
+  margin-bottom: 5rem;
 }
 .pricing-section h2 {
   text-align: center;
@@ -345,7 +352,7 @@ body {
 }
 
 .pricing-unit-card button {
-  background-color: #ea553d;
+  background-color: var(--color-primary-orange);
   border: none;
   color: white;
   padding: 1rem;
@@ -357,13 +364,13 @@ body {
 
 .pricing-unit-card button:hover {
   color: rgba(255, 255, 255, 0.854);
-  background-color: #b74e3d;
+  background-color: var(--color-secondary-orange);
   transition: 0.3s;
 }
 
 /* Free Trial Section */
 .free-trial-section {
-  background-color: #ea553d;
+  background-color: var(--color-primary-orange);
   color: white;
   display: flex;
   justify-content: center;
@@ -378,7 +385,7 @@ body {
 }
 
 .free-trial-section button {
-  background-color: #b74e3d;
+  background-color: var(--color-secondary-orange);
   border: none;
   color: white;
   padding: 1rem;
@@ -458,7 +465,7 @@ body {
 }
 
 .client-reviews h1 {
-  color: #ea553d;
+  color: var(--color-primary-orange);
   font-size: 5rem;
 }
 
@@ -553,7 +560,7 @@ textarea {
 .form-section button {
   padding: 15px 20px;
   color: white;
-  background-color: #ea553d;
+  background-color: var(--color-primary-orange);
   border: none;
   border-radius: 5px;
   font-weight: bold;
@@ -563,7 +570,7 @@ textarea {
 }
 
 .form-section button:hover {
-  background-color: #b74e3d;
+  background-color: var(--color-secondary-orange);
 }
 
 /* Footer */
